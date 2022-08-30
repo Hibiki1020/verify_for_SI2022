@@ -5,19 +5,28 @@ import math
 import csv
 
 class ClassOriginalDataset(data.Dataset):
-    def __init__(self, data_list, transform, phase, index_dict_path, dim_fc_out):
+    def __init__(self, data_list, transform, phase, index_dict_path, dim_fc_out, deg_threshold):
         self.data_list = data_list
         self.transform = transform
         self.phase = phase
         self.index_dict_path = index_dict_path
         self.dim_fc_out = dim_fc_out
+        self.deg_threshold = deg_threshold
 
         self.index_dict = []
+
+        self.index_dict.append([-1*int(self.deg_threshold)-1, 0])
 
         with open(index_dict_path) as f:
             reader = csv.reader(f)
             for row in reader:
-                self.index_dict.append(row)
+                tmp_row = [int(row[0]), int(row[1])+1]
+                self.index_dict.append(tmp_row)
+
+        self.index_dict.append([int(self.deg_threshold)+1, int(dim_fc_out)-1])
+
+        self.dict_len = len(self.index_dict)
+
 
     def search_index(self, number):
         index = int(1000000000)

@@ -1,5 +1,4 @@
 save_top_path: "/home/log/train_log"
-save_yaml_name: "train_config.yaml"
 
 train:
   - "/home/strage/flight_airsim_image/train_sequence1/degree_0"
@@ -27,25 +26,19 @@ valid:
 
 csv_name: "data_list.csv"
 
-index_csv_path: "/home/pycode/verify_for_SI2022/index_dict/index_dict_-30_30_range_step1deg.csv"
-
 multiGPU: 1 #1 is ture
 
 hyperparameters:
   img_size: 224
   resize: 224
-  num_classes: 63
-  deg_threshold: 30
   batch_size: 220
   num_epochs: 50
   optimizer_name: "RAdam"
+  loss_function: "MSELoss"
   lr: 1e-5
   alpha: 1e-5
   num_workers: 60
   save_step: 10
   mean_element: 0.5
   std_element: 0.5
-  dropout_rate: 0.1
-  do_white_makeup: False
-  do_white_makeup_from_back: False
-  whiteup_frame: 0
+  dropout_rate: 0.5

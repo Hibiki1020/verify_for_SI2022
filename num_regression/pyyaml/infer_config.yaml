@@ -1,0 +1,19 @@
+infer_dataset:
+  - "/home/ssd_dir/flight_airsim_image/sequence8"
+
+csv_name: "data_list.csv"
+
+radian_weights_top_directory: "/home/ssd_dir/inspection_of_num_regression_log/train_log_inspection_of_num_regression_2022_0821/"
+radian_weights_file_name: "param_rad.pth"
+
+degree_weights_top_directory: "/home/ssd_dir/inspection_of_num_regression_log/train_log_inspection_of_num_regression_2022_0821/"
+degree_weights_file_name: "param_deg.pth"
+
+infer_log_top_directory: "/home/ssd_dir/inspection_of_num_regression_log/train_log_inspection_of_num_regression_2022_0821/"
+radian_infer_log_file_name: "frame_infer_relust_radian.csv"
+degree_infer_log_file_name: "frame_infer_relust_degree.csv"
+
+resize: 224
+mean_element: 0.5
+std_element: 0.5
+dropout_rate: 0.0
