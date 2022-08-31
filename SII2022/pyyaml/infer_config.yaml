@@ -5,10 +5,10 @@ infer_dataset:
 
 csv_name: "data_list.csv"
 
-weights_top_directory: "/home/ssd_dir/verify_for_SI2022_log/train_log_2022_0826/"
+weights_top_directory: "/home/ssd_dir/verify_for_SI2022_log/train_log_2022_0901/"
 weights_file_name: "weights.pth"
 
-infer_log_top_directory: "/home/ssd_dir/verify_for_SI2022_log/train_log_2022_0826/"
+infer_log_top_directory: "/home/ssd_dir/verify_for_SI2022_log/train_log_2022_0901/"
 infer_log_file_name: "frame_infer_relust.csv"
 
 yaml_name: "infer_config.yaml"
