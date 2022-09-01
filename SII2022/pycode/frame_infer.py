@@ -94,7 +94,7 @@ class FrameInfer:
         #self.data_list = self.getDatalist()
 
         self.test_dataset = dataset_mod.ClassOriginalDataset(
-        data_list = make_datalist_mod.makeMultiDataList(self.infer_dataset_top_directory, self.csv_name),
+        data_list = make_datalist_mod.makeMultiDataList(self.infer_sequence, self.csv_name),
         transform = data_transform_mod.DataTransform(
             self.resize,
             self.mean_element,
