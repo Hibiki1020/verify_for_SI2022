@@ -36,7 +36,7 @@ hyperparameters:
   optimizer_name: "RAdam"
   loss_function: "MSELoss"
   lr: 1e-5
-  alpha: 1e-5
+  alpha: 1e-6
   num_workers: 60
   save_step: 10
   mean_element: 0.5
