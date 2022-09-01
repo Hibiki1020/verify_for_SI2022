@@ -200,10 +200,8 @@ class Trainer:
 
             for phase in ["train", "valid"]:
                 if phase == "train":
-                    self.net_degree.train()
                     self.net_radian.train()
                 elif phase == "valid":
-                    self.net_degree.eval()
                     self.net_radian.eval()
                 
                 #Data Load
