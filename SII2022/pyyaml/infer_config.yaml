@@ -1,21 +1,21 @@
 
-infer_dataset_top_directory: "/home/ssd_dir/flight_airsim_image/sequence8"
+infer_dataset_top_directory: "/home/strage/flight_airsim_image/sequence8"
 infer_dataset:
-  - "/home/ssd_dir/flight_airsim_image/sequence8"
+  - "/home/strage/flight_airsim_image/sequence8"
 
 csv_name: "data_list.csv"
 
-weights_top_directory: "/home/ssd_dir/verify_for_SI2022_log/train_log_2022_0901/"
+weights_top_directory: "/home/strage/verify_for_SI2022_log/train_log_2022_0901/"
 weights_file_name: "weights.pth"
 
-infer_log_top_directory: "/home/ssd_dir/verify_for_SI2022_log/train_log_2022_0901/"
+infer_log_top_directory: "/home/strage/verify_for_SI2022_log/train_log_2022_0901/"
 infer_log_file_name: "frame_infer_relust.csv"
 
 yaml_name: "infer_config.yaml"
 
 index_dict_name: "index_dict_-30_30_range_step1deg.csv"
 
-index_csv_path: "/home/pycode/attitude_estimator_in_timesformer/index_dict/index_dict_-30_30_range_step1deg.csv"
+index_csv_path: "/home/pycode/verify_for_SI2022/index_dict/index_dict_-30_30_range_step1deg.csv"
 
 hyperparameters:
   img_size: 224

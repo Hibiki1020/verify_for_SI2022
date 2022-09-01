@@ -314,7 +314,6 @@ if __name__ == "__main__":
     train_dataset = dataset_mod.ClassOriginalDataset(
         data_list = make_datalist_mod.makeMultiDataList(train_sequence, csv_name),
         transform = data_transform_mod.DataTransform(
-            img_size,
             resize,
             mean_element,
             std_element,
@@ -329,7 +328,6 @@ if __name__ == "__main__":
     valid_dataset = dataset_mod.ClassOriginalDataset(
         data_list = make_datalist_mod.makeMultiDataList(valid_sequence, csv_name),
         transform = data_transform_mod.DataTransform(
-            img_size,
             resize,
             mean_element,
             std_element,

@@ -84,7 +84,7 @@ class FrameInfer:
 
         self.value_dict = []
 
-        with open(self.index_dict_path) as fd:
+        with open(self.index_csv_path) as fd:
             reader = csv.reader(fd)
             for row in reader:
                 num = float(row[0])
@@ -96,7 +96,6 @@ class FrameInfer:
         self.test_dataset = dataset_mod.ClassOriginalDataset(
         data_list = make_datalist_mod.makeMultiDataList(self.infer_dataset_top_directory, self.csv_name),
         transform = data_transform_mod.DataTransform(
-            self.img_size,
             self.resize,
             self.mean_element,
             self.std_element,
