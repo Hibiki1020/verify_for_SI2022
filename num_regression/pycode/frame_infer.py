@@ -78,7 +78,7 @@ class FrameInfer:
 
     def getNetwork(self, weights_path):
         net = network_mod.Network(self.resize, self.dropout_rate, use_pretrained_vgg=False)
-        net.load_state_dict(torch.load(weights_path, map_location=self.device))
+        net.load_state_dict(torch.load(weights_path, map_location=self.device), strict=False)
         net.to(self.device)
         net.eval()
 
