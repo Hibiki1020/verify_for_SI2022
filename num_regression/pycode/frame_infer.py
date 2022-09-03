@@ -117,8 +117,8 @@ class FrameInfer:
             img_rad = img_rad.to(self.device)
 
             rad_result = self.net_radian(img_rad).to('cpu').detach().numpy().copy()
-            rad_roll = rad_result[0][0]
-            rad_pitch = rad_result[0][1]
+            rad_roll = rad_result[0][0]/3.141592*180.0
+            rad_pitch = rad_result[0][1]/3.141592*180.0
 
             rad_diff_roll = abs(rad_roll - label_rad[0]).to('cpu').detach().numpy().copy()
             rad_diff_pitch = abs(rad_pitch - label_rad[1]).to('cpu').detach().numpy().copy()
