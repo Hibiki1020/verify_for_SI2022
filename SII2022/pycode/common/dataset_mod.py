@@ -79,7 +79,7 @@ class ClassOriginalDataset(data.Dataset):
         roll_str = self.data_list[index][6]
         pitch_str = self.data_list[index][7]
 
-        roll_float = float(roll_str)
+        roll_float = float(roll_str) * -1.0 #For Gimbal and ROS Angle
         pitch_float = float(pitch_str)
 
         roll_list = self.float_to_array(roll_float)

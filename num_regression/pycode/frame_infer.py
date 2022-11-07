@@ -120,8 +120,8 @@ class FrameInfer:
             rad_roll = rad_result[0][0]/3.141592*180.0
             rad_pitch = rad_result[0][1]/3.141592*180.0
 
-            rad_diff_roll = abs(rad_roll - label_rad[0]).to('cpu').detach().numpy().copy()
-            rad_diff_pitch = abs(rad_pitch - label_rad[1]).to('cpu').detach().numpy().copy()
+            rad_diff_roll = (abs(rad_roll - label_rad[0]/3.141592*180.0).to('cpu').detach().numpy().copy())
+            rad_diff_pitch = (abs(rad_pitch - label_rad[1]/3.141592*180.0).to('cpu').detach().numpy().copy())
 
             diff_total_roll += rad_diff_roll
             diff_total_pitch += rad_diff_pitch
@@ -133,10 +133,10 @@ class FrameInfer:
             print("Infer Count: ", infer_count)
             print("--------------------Rad--------------------")
             print("Infered Roll  :" + str(rad_roll) +  "[rad]")
-            print("GT Roll       :" + str(label_rad[0]) + "[rad]")
+            print("GT Roll       :" + str(label_rad[0]/3.141592*180.0) + "[rad]")
             print("Diff Roll     :" + str(rad_diff_roll) + "[rad]")
             print("Infered Pitch :" + str(rad_pitch) + "[rad]")
-            print("GT Pitch      :" + str(label_rad[1]) + "[rad]")
+            print("GT Pitch      :" + str(label_rad[1]/3.141592*180.0) + "[rad]")
             print("Diff Pitch    :" + str(rad_diff_pitch) + "[rad]")
             print("-------------------------------------------")
 
