@@ -37,7 +37,7 @@ hyperparameters:
   num_classes: 63
   deg_threshold: 30
   batch_size: 220
-  num_epochs: 50
+  num_epochs: 80
   optimizer_name: "RAdam"
   lr: 1e-5
   alpha: 1e-6
